@@ -2,14 +2,18 @@
   <h2>Blog</h2>
   <div v-for="post in posts.data">
     <NuxtLink :to="`/blog/${post.id}`">
-      {{ post.attributes.title }}
+      <h5>
+        {{ post.attributes.title }}
+      </h5>
     </NuxtLink>
+    <p>
+      {{ post.attributes.teaser }}
+    </p>
   </div>
 </template>
 
 <script setup>
 const { data: posts } = await useFetch(
-  "http://localhost:1337/api/posts?locale=all&populate=*"
+  "http://localhost:1337/api/posts?locale=all&fields[0]=title&fields[1]=teaser"
 );
 </script>
- 

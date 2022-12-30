@@ -104,6 +104,14 @@
         "clips"
       ],
       "required": false
+    },
+    "teaser": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
     }
   }
 }
