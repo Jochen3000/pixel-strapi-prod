@@ -9,7 +9,6 @@
         </div>
         <div class="navidesktop">
           <NuxtLink to="/" class="navi-link w..current">DE</NuxtLink>
-          <NuxtLink to="/en" class="navi-link">EN</NuxtLink>
           <NuxtLink to="/blog" class="navi-link">Blog</NuxtLink>
         </div>
         <div
@@ -18,7 +17,6 @@
           class="burgermenu"
         >
           <NuxtLink to="/" class="navi-link w..current">DE</NuxtLink>
-          <NuxtLink to="/en" class="navi-link">EN</NuxtLink>
           <NuxtLink to="/blog" class="navi-link">Blog</NuxtLink>
         </div>
       </div>

@@ -1,14 +1,14 @@
 <template>
   <div>
-    <p>Product details for {{ id }}</p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste
-      necessitatibus accusamus architecto dignissimos non harum tenetur rem
-      itaque, dolor aut?
-    </p>
+    <h2>{{ post.data.attributes.title }}</h2>
+    <div>{{ post.data.attributes.content }}</div>
   </div>
 </template>
 
 <script setup>
 const { id } = useRoute().params;
+
+const { data: post } = await useFetch(
+  `http://localhost:1337/api/posts/${id}?locale=all&populate=*`
+);
 </script>
