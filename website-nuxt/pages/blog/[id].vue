@@ -5,22 +5,21 @@
       v-html="
         $mdRenderer.render(
           post.data.attributes.content.replace(
-            '/uploads',
-            'http://localhost:1337/uploads'
+            /\/uploads/g,
+            cmsUrl + '/uploads'
           )
         )
       "
     />
-    <b>{{ myData }}</b>
   </div>
 </template>
 
 <script setup>
 const { id } = useRoute().params;
+const config = useRuntimeConfig();
+const cmsUrl = process.env.API_BASE_URL;
 
 const { data: post } = await useFetch(
-  `http://localhost:1337/api/posts/${id}?locale=all&populate=*`
+  `${cmsUrl}/api/posts/${id}?locale=all&populate=*`
 );
-
-const myData = ref("Hallo");
 </script>

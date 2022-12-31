@@ -5,7 +5,7 @@
         href="https://www.linkedin.com/in/jochenade/"
         class="footersociallink darkblueshadow w-inline-block"
         ><img
-          src="images/linkedin-round.svg"
+          src="/images/linkedin-round.svg"
           loading="lazy"
           width="32"
           height="32"
@@ -15,7 +15,7 @@
         href="https://twitter.com/joetronico"
         class="footersociallink lightblueshadow w-inline-block"
         ><img
-          src="images/twitter-round.svg"
+          src="/images/twitter-round.svg"
           loading="lazy"
           width="32"
           height="32"

@@ -13,7 +13,10 @@
 </template>
 
 <script setup>
+const config = useRuntimeConfig();
+const cmsUrl = process.env.API_BASE_URL;
+
 const { data: posts } = await useFetch(
-  "http://localhost:1337/api/posts?locale=all&fields[0]=title&fields[1]=teaser"
+  `${cmsUrl}/api/posts?locale=all&fields[0]=title&fields[1]=teaser`
 );
 </script>
