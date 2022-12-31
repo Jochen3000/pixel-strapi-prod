@@ -14,9 +14,8 @@
 
 <script setup>
 const config = useRuntimeConfig();
-const cmsUrl = process.env.API_BASE_URL;
 
 const { data: posts } = await useFetch(
-  `${cmsUrl}/api/posts?locale=all&fields[0]=title&fields[1]=teaser`
+  `${config.public.baseUrl}/api/posts?locale=all&fields[0]=title&fields[1]=teaser`
 );
 </script>
