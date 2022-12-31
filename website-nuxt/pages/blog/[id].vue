@@ -3,6 +3,15 @@
     <h2>{{ post.data.attributes.title }}</h2>
     <div
       v-html="
+        post.data.attributes.content.replace(
+          /..\/..\/..\/..\/uploads/g,
+          config.public.baseUrl + '/uploads'
+        )
+      "
+    />
+
+    <!-- <div
+      v-html="
         $mdRenderer.render(
           post.data.attributes.content.replace(
             /\/uploads/g,
@@ -10,7 +19,7 @@
           )
         )
       "
-    />
+    /> -->
   </div>
 </template>
 
