@@ -5,4 +5,9 @@ export default defineNuxtConfig({
     "@/assets/css/normalize.css",
     "@/assets/css/webflow.css",
   ],
+  runtimeConfig: {
+    public: {
+      baseUrl: "some value",
+    },
+  },
 });

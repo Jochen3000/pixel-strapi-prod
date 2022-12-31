@@ -6,7 +6,7 @@
         $mdRenderer.render(
           post.data.attributes.content.replace(
             /\/uploads/g,
-            cmsUrl + '/uploads'
+            config.public.baseUrl + '/uploads'
           )
         )
       "
@@ -17,9 +17,8 @@
 <script setup>
 const { id } = useRoute().params;
 const config = useRuntimeConfig();
-const cmsUrl = process.env.API_BASE_URL;
 
 const { data: post } = await useFetch(
-  `${cmsUrl}/api/posts/${id}?locale=all&populate=*`
+  `${config.public.baseUrl}/api/posts/${id}?locale=all&populate=*`
 );
 </script>
