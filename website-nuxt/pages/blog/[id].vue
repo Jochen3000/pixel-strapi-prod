@@ -1,25 +1,25 @@
 <template>
   <div>
     <h2>{{ post.data.attributes.title }}</h2>
+    <img
+      :src="
+        config.public.baseUrl +
+        post.data.attributes.image.data.attributes.formats.medium.url
+      "
+      loading="lazy"
+      sizes="(max-width: 479px) 39vw, 160px"
+      alt=""
+      className="image"
+    />
+    <h4>{{ post.data.attributes.teaser }}</h4>
     <div
       v-html="
         post.data.attributes.content.replace(
-          /..\/..\/..\/..\/uploads/g,
+          /\/uploads/g,
           config.public.baseUrl + '/uploads'
         )
       "
     />
-
-    <!-- <div
-      v-html="
-        $mdRenderer.render(
-          post.data.attributes.content.replace(
-            /\/uploads/g,
-            config.public.baseUrl + '/uploads'
-          )
-        )
-      "
-    /> -->
   </div>
 </template>
 

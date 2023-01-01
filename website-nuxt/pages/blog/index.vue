@@ -5,6 +5,17 @@
       <h5>
         {{ post.attributes.title }}
       </h5>
+      <img
+        v-if="post.attributes.image.data"
+        :src="
+          config.public.baseUrl +
+          post.attributes.image.data.attributes.formats.medium.url
+        "
+        loading="lazy"
+        sizes="(max-width: 479px) 39vw, 160px"
+        alt=""
+        className="image"
+      />
     </NuxtLink>
     <p>
       {{ post.attributes.teaser }}
@@ -16,6 +27,6 @@
 const config = useRuntimeConfig();
 
 const { data: posts } = await useFetch(
-  `${config.public.baseUrl}/api/posts?locale=all&fields[0]=title&fields[1]=teaser`
+  `${config.public.baseUrl}/api/posts?locale=all&populate=*`
 );
 </script>
