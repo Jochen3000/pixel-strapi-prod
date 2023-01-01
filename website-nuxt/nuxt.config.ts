@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     "@/assets/css/pixel-berlin.webflow.css",
     "@/assets/css/normalize.css",
     "@/assets/css/webflow.css",
+    "@/assets/css/style.css",
   ],
   runtimeConfig: {
     public: {
