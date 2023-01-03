@@ -49,7 +49,78 @@
         </div>
       </div>
     </div>
-    <ProjectsDescription />
+    <div class="projectdescription">
+      <div class="project-intro" v-if="showProjectOverview === true">
+        <div class="teaserheadline">
+          <h3 class="h3-teaser">
+            My project portfolio includes websites and applications for larger
+            companies, start-ups and non-profit organizations.
+          </h3>
+        </div>
+        <p>
+          Depending on the task, different tools and technologies are used. Here
+          is a selection.
+        </p>
+      </div>
+      <div v-for="(project, index) in projects.data">
+        <div class="project" v-if="index === selectedItemIndex">
+          <div class="teaserheadline">
+            <h3 class="h3-teaser">{{ project.attributes.title }}</h3>
+          </div>
+          <p class="paragraph-2">
+            Website for product coaching companies. Product innovation, less
+            risky, faster and with more fun.
+          </p>
+          <div class="project-tags">
+            <div class="tag">
+              <img
+                src="images/tag-icon.svg"
+                loading="lazy"
+                alt=""
+                class="skill-icon"
+              />
+              <div class="text-block-5">ux</div>
+            </div>
+            <div class="tag">
+              <img
+                src="images/tag-icon.svg"
+                loading="lazy"
+                alt=""
+                class="skill-icon"
+              />
+              <div class="text-block-5">figma</div>
+            </div>
+            <div class="tag">
+              <img
+                src="images/tag-icon.svg"
+                loading="lazy"
+                alt=""
+                class="skill-icon"
+              />
+              <div class="text-block-5">css</div>
+            </div>
+            <div class="tag">
+              <img
+                src="images/tag-icon.svg"
+                loading="lazy"
+                alt=""
+                class="skill-icon"
+              />
+              <div class="text-block-5">js</div>
+            </div>
+          </div>
+          <a href="https://podojo.com" class="view-project w-inline-block"
+            ><img
+              src="images/link-chevron.svg"
+              loading="lazy"
+              alt=""
+              class="link-chevron"
+            />
+            <div class="linktext">podojo website</div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -65,7 +136,6 @@ const { data: projects } = await useFetch(
 const showDetails = (index) => {
   showProjectOverview.value = false;
   selectedItemIndex.value = index;
-  console.log(index);
 };
 
 const showOverview = () => {
