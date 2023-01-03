@@ -326,7 +326,7 @@ figcaption a {
   transform: scale(0, 1);
 }
 
-.loading-progress {
+.loadingprogress {
   -webkit-animation: load 1s forwards linear;
   animation: load 1s forwards linear;
 }

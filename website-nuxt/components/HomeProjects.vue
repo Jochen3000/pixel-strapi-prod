@@ -12,11 +12,13 @@
           <div class="favouitesitesblock">
             <div
               v-for="(project, index) in projects.data"
-              v-on:click="showDetails(index)"
               class="favouriteproject"
             >
               <!-- Overview -->
-              <div v-if="showProjectOverview === true">
+              <div
+                v-if="showProjectOverview === true"
+                v-on:click="showDetails(index)"
+              >
                 <img
                   :src="
                     config.public.baseUrl +
@@ -44,8 +46,11 @@
             </div>
           </div>
         </div>
-        <div class="loading-wrapper">
-          <div class="loading-bar"></div>
+        <div class="loading-wrapper" :class="{ loading: isLoading }">
+          <div
+            class="loading-bar"
+            :class="{ loadingprogress: isLoadingProgress }"
+          />
         </div>
       </div>
     </div>
@@ -128,6 +133,8 @@
 const config = useRuntimeConfig();
 const showProjectOverview = ref(true);
 const selectedItemIndex = ref(null);
+const isLoading = ref(false);
+const isLoadingProgress = ref(false);
 
 const { data: projects } = await useFetch(
   `${config.public.baseUrl}/api/projects?locale=all&populate=*`
@@ -135,7 +142,15 @@ const { data: projects } = await useFetch(
 
 const showDetails = (index) => {
   showProjectOverview.value = false;
-  selectedItemIndex.value = index;
+  isLoading.value = true;
+  setTimeout(() => {
+    isLoadingProgress.value = true;
+    selectedItemIndex.value = index;
+  }, 250);
+  setTimeout(() => {
+    isLoading.value = false;
+    isLoadingProgress.value = false;
+  }, 1250);
 };
 
 const showOverview = () => {
