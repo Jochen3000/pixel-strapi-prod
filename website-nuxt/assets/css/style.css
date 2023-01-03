@@ -396,3 +396,7 @@ figcaption a {
 .browser-bar {
   opacity: 0.8;
 }
+
+.browser-bar:hover {
+  opacity: 1;
+}
