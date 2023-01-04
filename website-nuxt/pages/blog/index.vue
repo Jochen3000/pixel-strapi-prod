@@ -7,10 +7,7 @@
       </h5>
       <img
         v-if="post.attributes.image.data"
-        :src="
-          config.public.baseUrl +
-          post.attributes.image.data.attributes.formats.medium.url
-        "
+        :src="config.public.baseUrl + post.attributes.image.data.attributes.url"
         loading="lazy"
         sizes="(max-width: 479px) 39vw, 160px"
         alt=""

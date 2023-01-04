@@ -20,10 +20,10 @@
                 v-on:click="showDetails(index)"
               >
                 <img
+                  v-if="project.attributes.preview_image.data"
                   :src="
                     config.public.baseUrl +
-                    project.attributes.preview_image.data.attributes.formats
-                      .medium.url
+                    project.attributes.preview_image.data.attributes.url
                   "
                   loading="lazy"
                   sizes="(max-width: 479px) 39vw, 160px"
@@ -35,10 +35,10 @@
               <!-- Details -->
               <div class="project-container" v-if="index === selectedItemIndex">
                 <img
+                  v-if="project.attributes.image.data"
                   :src="
                     config.public.baseUrl +
-                    project.attributes.preview_image.data.attributes.formats
-                      .medium.url
+                    project.attributes.image.data.attributes.url
                   "
                   loading="lazy"
                 />

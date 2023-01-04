@@ -2,9 +2,9 @@
   <div>
     <h2>{{ post.data.attributes.title }}</h2>
     <img
+      v-if="post.data.attributes.image.data"
       :src="
-        config.public.baseUrl +
-        post.data.attributes.image.data.attributes.formats.medium.url
+        config.public.baseUrl + post.data.attributes.image.data.attributes.url
       "
       loading="lazy"
       sizes="(max-width: 479px) 39vw, 160px"
