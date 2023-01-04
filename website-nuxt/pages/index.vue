@@ -5,7 +5,7 @@
       <div class="containerinner content">
         <!-- <HomeBlog /> -->
         <div id="projects" class="projectsblock">
-          <HomeProjects />
+          <ProjectsContainer />
         </div>
       </div>
     </div>
