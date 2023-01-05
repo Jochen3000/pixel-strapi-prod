@@ -2093,7 +2093,7 @@ figcaption {
 .chat-container {
   overflow: scroll;
   height: 400px;
-  background-image: url('../images/background-whatsapp.png');
+  background-image: url('/images/background-whatsapp.png');
   background-position: 0px 0px;
   background-size: auto;
 }
@@ -3168,6 +3168,7 @@ figcaption {
   font-style: italic;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Charter';
   src: url('../fonts/Charter-Regular.ttf') format('truetype'), url('../fonts/Charter-Regular.otf') format('opentype');
@@ -3175,6 +3176,7 @@ figcaption {
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Charter';
   src: url('../fonts/Charter-Bold.ttf') format('truetype'), url('../fonts/Charter-Bold.otf') format('opentype');
@@ -3182,6 +3184,7 @@ figcaption {
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Montserrat local';
   src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
@@ -3189,6 +3192,7 @@ figcaption {
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Montserrat local';
   src: url('../fonts/Montserrat-Light.ttf') format('truetype');
@@ -3196,13 +3200,15 @@ figcaption {
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Montserrat local';
-  src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+  src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Montserrat local';
   src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
@@ -3210,13 +3216,15 @@ figcaption {
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Inter medium local';
-  src: url('../fonts/Inter-Medium.ttf') format('truetype');
+  src: url('/fonts/Inter-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Inter regular local';
   src: url('../fonts/Inter-Regular.ttf') format('truetype');

@@ -1,43 +1,4 @@
-<script setup>
-/**
- * projects section
- */
-
-const favouriteProjects = document.querySelectorAll(".favouriteproject");
-const loadingWrapper = document.querySelector(".loading-wrapper");
-const startScreen = document.querySelector(".screenstartpage");
-const screenContent = document.querySelector(".project-container");
-const loadingBar = document.querySelector(".loading-bar");
-const browserBar = document.querySelector(".browser-bar");
-const projectDescriptionIntro = document.querySelector(".project-intro");
-const projectDescription = [
-  document.querySelector(".project-1"),
-  document.querySelector(".project-2"),
-  document.querySelector(".project-3"),
-];
-
-projectDescription[0].classList.add("hide");
-projectDescription[1].classList.add("hide");
-projectDescription[2].classList.add("hide");
-
-for (let i = 0; i < favouriteProjects.length; i++) {
-  favouriteProjects[i].addEventListener("click", (event) => {
-    loadingWrapper.classList.add("loading");
-    setTimeout(function () {
-      screenContent.insertAdjacentHTML(
-        "afterbegin",
-        `<img src="/images/project-${i}.png">`
-      );
-      loadingBar.classList.add("loading-progress");
-      projectDescription[i].classList.remove("hide");
-    }, 250);
-    setTimeout(function () {
-      loadingWrapper.classList.remove("loading");
-      loadingBar.classList.remove("loading-progress");
-    }, 1250);
-  });
-}
-
+<script>
 /**
  * whatsapp simulation
  */
