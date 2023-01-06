@@ -11,4 +11,15 @@ export default defineNuxtConfig({
       baseUrl: "some value",
     },
   },
+  app: {
+    head: {
+      title: "Pixel Berlin",
+      script: [
+        {
+          src: "http://localhost:3000/custom.js",
+          defer: true,
+        },
+      ],
+    },
+  },
 });

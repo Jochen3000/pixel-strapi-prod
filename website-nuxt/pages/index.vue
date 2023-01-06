@@ -3,8 +3,9 @@
   <div class="page-container w-container">
     <div class="content wf-section">
       <div class="containerinner content">
-        <!-- <HomeBlog /> -->
+        <HomeBlog />
         <div id="projects" class="projectsblock">
+          <ProjectsHome />
           <HomeWhatsApp />
         </div>
       </div>
