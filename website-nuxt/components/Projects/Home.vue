@@ -8,16 +8,18 @@
         <img src="images/light.svg" loading="lazy" alt="" class="safari" />
       </div>
       <div class="screencontainer">
-        <div class="screenstartpage">
-          <ProjectsDisplay
-            v-for="(project, index) in projects.data"
-            :project="project"
-            :index="index"
-            :showProjectOverview="showProjectOverview"
-            :selectedItemIndex="selectedItemIndex"
-            :showDetails="showDetails"
-            class="favouriteproject"
-          />
+        <div :class="{ screenstartpage: showProjectOverview }">
+          <div class="favouitesitesblock">
+            <ProjectsDisplay
+              v-for="(project, index) in projects.data"
+              :project="project"
+              :index="index"
+              :showProjectOverview="showProjectOverview"
+              :selectedItemIndex="selectedItemIndex"
+              :showDetails="showDetails"
+              class="favouriteproject"
+            />
+          </div>
         </div>
         <div class="loading-wrapper" :class="{ loading: isLoading }">
           <div
