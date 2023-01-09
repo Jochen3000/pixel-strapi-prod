@@ -5,7 +5,7 @@
         pixel.berlin<br />web development.<br />frontend &amp; prototypes.
       </h1>
       <p class="paragraph">
-        Crafting prototypes, websites and apps.Moving from idea to product with
+        Crafting prototypes, websites and apps. Moving from idea to product with
         a focus on user experience.
       </p>
       <div class="logocontainer">

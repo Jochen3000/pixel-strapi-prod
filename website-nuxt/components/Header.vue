@@ -16,8 +16,8 @@
           data-w-id="49f167b4-2cb9-d8a6-8b4b-64bc6f6110d8"
           class="burgermenu"
         >
-          <NuxtLink to="/about" class="navi-link w..current">About</NuxtLink>
-          <NuxtLink to="/blog" class="navi-link">Blog</NuxtLink>
+          <NuxtLink to="/" class="navi-link w..current">DE</NuxtLink>
+          <NuxtLink to="" class="navi-link">EN</NuxtLink>
         </div>
       </div>
     </header>

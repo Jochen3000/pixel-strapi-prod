@@ -25,21 +25,17 @@
     <div class="footermetablock">
       <div class="footerlinkblock">
         <div class="footerinfo">
-          <a href="https://www.pixel.berlin/legal/impressum" class="footerlink"
-            >Impressum</a
-          >
+          <NuxtLink to="/impressum" class="footerlink"> Impressum </NuxtLink>
            |
-          <a
-            href="http://www.pixel.berlin/legal/datenschutzerklaerung"
-            class="footerlink"
-            >Datenschutzerklärung</a
-          >
+          <NuxtLink to="/datenschutzerklaerung" class="footerlink">
+            Datenschutzerklärung
+          </NuxtLink>
         </div>
       </div>
       <div class="footerinfoblock">
         <div class="footerinfo">
           Copyright © 2022 -
-          <a href="#" class="footerinfo">Powered by Webflow</a>
+          <a href="#" class="footerinfo">Powered by Webflow & Nuxt.js</a>
         </div>
       </div>
     </div>

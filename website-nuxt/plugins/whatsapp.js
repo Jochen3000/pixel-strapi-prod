@@ -5,7 +5,6 @@
 const whatsApp = () => {
 
     /* select elements and hide */
-    const whatsApp = document.querySelector('.whatsapp-container');
     const isTyping = document.querySelector('.contact-tap');
     const messagesComputer = document.querySelectorAll('.message-computer');
     const messagesUser = document.querySelectorAll('.message-user');
@@ -21,9 +20,8 @@ const whatsApp = () => {
 
 
     /* display time in top bar */
-    if (whatsApp) {
-        setInterval(currentTime, 30000);
-    }
+    currentTime()
+    setInterval(currentTime, 30000);
 
     function currentTime() {
         let d = new Date();
@@ -33,19 +31,17 @@ const whatsApp = () => {
         document.querySelector('.time-display').innerHTML = `${hours}:${minutesString}`;
     }
 
-    if (whatsApp) {
-        isTyping.classList.add('hide');
-        messagesUser[0].classList.add('hide');
-        messagesUser[1].classList.add('hide');
-        messagesUser[2].classList.add('hide');
-        messagesComputer[1].classList.add('hide');
-        messagesComputer[2].classList.add('hide');
-        messagesComputer[3].classList.add('hide');
-        messagesComputer[4].classList.add('hide');
-        textEntryMessage.classList.add('hide');
-        textEntryContact.classList.add('hide');
-        formSubmitButton.classList.add('hide');
-    }
+    isTyping.classList.add('hide');
+    messagesUser[0].classList.add('hide');
+    messagesUser[1].classList.add('hide');
+    messagesUser[2].classList.add('hide');
+    messagesComputer[1].classList.add('hide');
+    messagesComputer[2].classList.add('hide');
+    messagesComputer[3].classList.add('hide');
+    messagesComputer[4].classList.add('hide');
+    textEntryMessage.classList.add('hide');
+    textEntryContact.classList.add('hide');
+    formSubmitButton.classList.add('hide');
 
     // function to display computer messages
     const displayComputerMessage = (id) => {
@@ -67,25 +63,23 @@ const whatsApp = () => {
         });
     }
 
-    if (whatsApp) {
-        // Show second message on focus textEntryName 
-        textEntryName.addEventListener("focus", () => {
-            displayComputerMessage(1);
-        });
+    // Show second message on focus textEntryName 
+    textEntryName.addEventListener("focus", () => {
+        displayComputerMessage(1);
+    });
 
-        // Press submit button to send user messages
-        textEntryButton.addEventListener("click", () => {
+    // Press submit button to send user messages
+    textEntryButton.addEventListener("click", () => {
+        displayUserMessage();
+    });
+
+    // Press enter key to send user messages
+    whatsappForm.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
             displayUserMessage();
-        });
-
-        // Press enter key to send user messages
-        whatsappForm.addEventListener("keypress", (e) => {
-            if (e.key === "Enter") {
-                displayUserMessage();
-                e.preventDefault();
-            }
-        });
-    }
+            e.preventDefault();
+        }
+    });
 
     // scroll up window if needed
     const scrollUp = () => {
@@ -145,11 +139,9 @@ const whatsApp = () => {
             .catch((error) => alert(error));
     };
 
-    if (whatsApp) {
-        document
-            .querySelector("form")
-            .addEventListener("submit", handleSubmit);
-    }
+    document
+        .querySelector("form")
+        .addEventListener("submit", handleSubmit);
 }
 
 export default defineNuxtPlugin((nuxtApp) => {
