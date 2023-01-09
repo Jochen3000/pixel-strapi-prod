@@ -327,3 +327,11 @@
     </div>
   </div>
 </template>
+
+<script setup>
+onMounted(() => {
+  const nuxtApp = useNuxtApp();
+  const whatsApp = nuxtApp.whatsApp;
+  whatsApp();
+});
+</script>

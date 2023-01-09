@@ -2620,8 +2620,7 @@ figcaption {
   }
 
   .social-row {
-    /* display: none; */
-    /* TEMPORARY FOR DEV */
+    display: none;
   }
 
   .bigimagecontainer {
